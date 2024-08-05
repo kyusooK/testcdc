@@ -3,7 +3,7 @@ package contracts.rest
 org.springframework.cloud.contract.spec.Contract.make {
     request {
         method 'GET'
-        url ('/inventories/search/findByTestInventory')
+        url ('/inventories/search/findByTestInventory/1')
         headers {
             contentType(applicationJson())
         }
@@ -15,8 +15,8 @@ org.springframework.cloud.contract.spec.Contract.make {
                 stock: 10,
         )
         bodyMatchers {
-            jsonPath('$[0].id', byRegex(nonEmpty()).asLong())
-            jsonPath('$[0].stock', byRegex(nonEmpty()).asInteger())
+            jsonPath('$.id', byRegex(nonEmpty()).asLong())
+            jsonPath('$.stock', byRegex(nonEmpty()).asInteger())
         }
         headers {
             contentType(applicationJson())

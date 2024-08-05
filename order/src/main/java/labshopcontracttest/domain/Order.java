@@ -43,10 +43,11 @@ public class Order {
         orderPlaced.publishAfterCommit();
 
         labshopcontracttest.external.GetInventoryQuery getInventoryQuery = new labshopcontracttest.external.GetInventoryQuery();
-        // getInventoryQuery.set??(get???());
+        getInventoryQuery.setId(1L);
+
         OrderApplication.applicationContext
             .getBean(labshopcontracttest.external.InventoryService.class)
-            .testInventory(id, getInventoryQuery);
+            .testInventory(getInventoryQuery.getId(), getInventoryQuery);
     }
     //>>> Clean Arch / Port Method
 

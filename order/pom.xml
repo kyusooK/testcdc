@@ -38,6 +38,10 @@
 
 		<!-- Lombok -->
 		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
+		</dependency>
+		<dependency>
 				<groupId>org.projectlombok</groupId>
 				<artifactId>lombok</artifactId>
 				<version>1.18.12</version>
@@ -146,19 +150,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-
-
-			<plugin>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-contract-maven-plugin</artifactId>
-				<version>2.1.1.RELEASE</version>
-				<extensions>true</extensions>
-				<configuration>
-					<baseClassForTests>
-						com.example.template.RestBase
-					</baseClassForTests>
-				</configuration>
 			</plugin>
 		</plugins>
 		

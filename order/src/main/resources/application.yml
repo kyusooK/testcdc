@@ -53,7 +53,7 @@ logging:
 
 api:
   url:
-    inventory: http://localhost:8082
+    inventory: http://localhost:8083
 
 server:
   port: 8082

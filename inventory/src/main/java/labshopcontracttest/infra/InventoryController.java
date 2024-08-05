@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import labshopcontracttest.domain.GetInventoryQuery;
+import labshopcontracttest.domain.Inventory;
+import labshopcontracttest.domain.InventoryRepository;
+
 @RestController
 public class InventoryController {
 
@@ -26,14 +30,8 @@ public class InventoryController {
     // consumer
 
     // Provider
-    @GetMapping(path = "/inventories/search/findByTestInventory")
-    public Inventory testInventory(
-        @PathVariable("id") Long id,
-        GetInventoryQuery getInventoryQuery
-    ) {
-        return inventoryRepository.testInventory(
-            id,
-            getInventoryQuery.getStock()
-        );
+    @GetMapping(path = "/inventories/search/findByTestInventory/{id}")
+    public Inventory testInventory(@PathVariable("id") Long id, GetInventoryQuery getInventoryQuery) {
+        return inventoryRepository.findByTestInventory(id, getInventoryQuery.getStock());
     }
 }

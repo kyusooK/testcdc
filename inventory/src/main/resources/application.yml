@@ -53,7 +53,7 @@ logging:
 
 api:
   url:
-    : http://localhost:8083
+    inventory: http://localhost:8083
 
 server:
   port: 8083
@@ -89,4 +89,4 @@ spring:
           contentType: application/json
 api:
   url: 
-    : http://localhost:8080
+    inventory: http://localhost:8080
