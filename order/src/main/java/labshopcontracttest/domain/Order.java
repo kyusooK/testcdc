@@ -42,7 +42,7 @@ public class Order {
         OrderPlaced orderPlaced = new OrderPlaced(this);
         orderPlaced.publishAfterCommit();
 
-        labshopcontracttest.external.GetInventory getInventoryQuery = new labshopcontracttest.external.GetInventory();
+        labshopcontracttest.external.GetInventoryQuery getInventoryQuery = new labshopcontracttest.external.GetInventoryQuery();
         // getInventoryQuery.set??(get???());
         OrderApplication.applicationContext
             .getBean(labshopcontracttest.external.InventoryService.class)
